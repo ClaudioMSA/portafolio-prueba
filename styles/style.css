@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22d4fd;
+    --color-otros: #007bff;
+    --color-hover: #272727;
+
+    --font-principal: 'Montserrat', sans serif;
+    --font-general: 'Krona One', sans serif;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+.header{
+padding: 2% 0% 0% 13%;
+}
+
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--font-principal);
+    font-size: 1.5rem; /* se cambio el 24px por 1.5 rem (1rem=16px) para que sea mas accesible */
+    font-weight: 600;
+    color: var(--color-terciario);
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.header__menu__link:hover{
+    color: var(--color-otros);
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 6% 15%;
+    justify-content: space-between;
+    gap: 82px;
+}
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.presentacion__contenido__titulo{
+font-size: 2.25rem;
+font-family: var(--font-general);
+flex-direction: column;
+gap: 40px;
+align-items: center;
+}
+
+/* Se define una clase (class) para el strong en HTML
+y se aplica con un punto inicial(.) llamando a la clase*/
+.titulo-destaque{
+    color:var(--color-terciario);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.4rem;
+    font-family: var(--font-principal);
+}
+
+.presentacion__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--font-general);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.presentacion__enlaces__link{
+    width: 82%;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    font-family: var(--font-principal);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.presentacion__enlaces__link:hover{
+    background-color: var(--color-hover);
+    padding: 4%;
+    cursor: pointer;
+}
+
+.presentacion__imagen{
+    width: 50%;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--font-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+@media(max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .header__menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
+
